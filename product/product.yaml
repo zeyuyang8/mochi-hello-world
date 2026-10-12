@@ -1,0 +1,9 @@
+_ > nanoagent.plugin.manifest.ProductConfig:
+tagline: "Say hello to anyone by name"
+summary: "The smallest NanoAgent plugin: one tool that greets someone. A starting point for your own."
+highlights:
+  - "One tool, no network, no files"
+  - "Every plugin rule passes"
+steps:
+  - "Give a name"
+  - "Get a greeting back"

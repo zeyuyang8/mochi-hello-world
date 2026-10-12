@@ -1,0 +1,30 @@
+_ > nanoagent.plugin.manifest.ManifestConfig:
+id: hello-world
+name: Hello World
+version: 0.1.0
+group: General
+status: ready
+
+runtime > nanoagent.plugin.manifest.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+
+permissions > nanoagent.plugin.manifest.PermissionsConfig:
+  network > nanoagent.plugin.manifest.NetworkConfig:
+    hosts: []
+  filesystem > nanoagent.plugin.manifest.FilesystemConfig:
+    write: []
+
+# One entry per contract.Tool; its input and output classes are contract.TOOLS's.
+tools > dict[contract.Tool, nanoagent.plugin.manifest.ToolConfig]:
+  say_hello:
+    description: Greet someone by name
+
+# One entry per contract.Task; its input class is contract.TASKS's.
+tasks > dict[contract.Task, nanoagent.plugin.manifest.TaskConfig]:
+  say-hello:
+    description: Say hello to someone
+    runner: tool
+    tools: [say_hello]
+    reference: null
+    instructions: Greet the person by name.
