@@ -37,9 +37,9 @@
   --radius: 16px;
   --radius-lg: 20px;
   --radius-pill: 999px;
-  /* The host's column already pads the frame, so a page keeps only room for focus rings and
-     card shadows at its edges, and starts flush with the host's own content. */
-  --page-inset: 4px;
+  /* The host's column pads the frame; inside it a page keeps a margin of its own, so its
+     content stands clear of the frame's scrollbar as well as its focus rings and card shadows. */
+  --page-inset: 16px;
   --sans: Inter, "Inter var", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
