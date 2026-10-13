@@ -2,7 +2,6 @@ _ > nanoagent.plugin.manifest.ManifestConfig:
 id: hello-world
 name: Hello World
 version: 0.1.0
-group: General
 status: ready
 
 runtime > nanoagent.plugin.manifest.RuntimeConfig:
